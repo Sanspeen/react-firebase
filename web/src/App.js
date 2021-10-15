@@ -20,22 +20,13 @@ import OwnerQuestionsPage from './pages/OwnerQuestionsPage'
 import { useAuthState } from "react-firebase-hooks/auth";
 
 firebase.initializeApp({
-  apiKey: "AIzaSyCTySyvuIDPg7RWF6ceuuwC2t3BEiAK38o",
-  authDomain: "question-app-demo.firebaseapp.com",
-  projectId: "question-app-demo",
-  storageBucket: "question-app-demo.appspot.com",
-  messagingSenderId: "1038673531562",
-  appId: "1:1038673531562:web:da90421f639a3115dcf6d3"
-});
-
-const firebaseConfig = {
   apiKey: "AIzaSyBxlb6vmmmu8ysYdKzploj77tp00hwgviA",
   authDomain: "question-and-answer-f6a1b.firebaseapp.com",
   projectId: "question-and-answer-f6a1b",
   storageBucket: "question-and-answer-f6a1b.appspot.com",
   messagingSenderId: "525335137725",
   appId: "1:525335137725:web:fbe884cd9f65f96fb516d4"
-};
+});
 
 const auth = firebase.auth();
 
