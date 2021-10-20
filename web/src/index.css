@@ -67,6 +67,16 @@ body {
     resize: none;
   }
 
+  hr{
+    margin-top: 100px;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
   .question h2 {
     font-size: 2.5rem;
   }
