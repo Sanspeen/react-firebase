@@ -10,9 +10,11 @@ export default function authReducer(state = initialState, action) {
     case actions.LOGIN:
       const payload = action.payload;
       return {email: payload.email, uid: payload.uid }
+
     case actions.LOGOUT:
       return initialState
-    default:
+    
+      default:
       return state
   }
 }
