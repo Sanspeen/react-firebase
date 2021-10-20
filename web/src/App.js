@@ -52,7 +52,6 @@ const App = ({ dispatch }) => {
             <Route exact path="/new" component={QuestionFormPage} />
             <Redirect to="/" />
           </Switch>
-          <Footer></Footer>
         </> :
         <>
           <PublicNavbar />
@@ -65,9 +64,9 @@ const App = ({ dispatch }) => {
             <Route exact path="/answer/:id" component={AnswerFormPage} />
             <Redirect to="/" />
           </Switch>
-          <Footer></Footer>
         </>
       }
+      <Footer></Footer>
     </Router>
   )
 }
@@ -96,6 +95,4 @@ function SignOut({ dispatch }) {
     )
   );
 }
-
-
 export default App
