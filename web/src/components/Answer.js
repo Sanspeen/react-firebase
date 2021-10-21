@@ -7,7 +7,6 @@ export const Answer = ({ answer, userId, onDelete }) => (
     {answer.userId === userId &&(
       <button onClick = {() => onDelete(answer.id)}>🗑️</button>
     )}
-    <p>{answer.answer}</p>
-    
+    <div dangerouslySetInnerHTML={{__html:answer.answer}} />
   </aside>
 )

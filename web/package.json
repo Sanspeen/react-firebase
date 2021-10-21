@@ -6,6 +6,8 @@
     "main": "src/index.js",
     "dependencies": {
         "firebase": "^8.10.0",
+        "jodit": "^3.8.6",
+        "jodit-react": "^1.1.5",
         "react": "16.12.0",
         "react-dom": "16.12.0",
         "react-firebase-hooks": "^3.0.3",
@@ -16,7 +18,8 @@
         "redux": "4.0.5",
         "redux-devtools-extension": "2.13.8",
         "redux-thunk": "2.3.0",
-        "sweetalert": "^2.1.2"
+        "sweetalert": "^2.1.2",
+        "sweetalert2": "^11.1.9"
     },
     "devDependencies": {
         "typescript": "3.3.3"
