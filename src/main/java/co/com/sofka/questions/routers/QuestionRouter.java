@@ -80,7 +80,7 @@ public class QuestionRouter {
     }
 
     @Bean
-    public RouterFunction<ServerResponse> delete(DeleteUseCase deleteUseCase) {
+    public RouterFunction<ServerResponse> deleteQuestion(DeleteUseCase deleteUseCase) {
         return route(
                 DELETE("/delete/{id}").and(accept(MediaType.APPLICATION_JSON)),
                 request -> ServerResponse.accepted()
