@@ -19,15 +19,8 @@ import QuestionFormPage from './pages/QuestionFormPage'
 import AnswerFormPage from './pages/AnswerFormPage'
 import OwnerQuestionsPage from './pages/OwnerQuestionsPage'
 import { useAuthState } from "react-firebase-hooks/auth";
-
-firebase.initializeApp({
-  apiKey: "AIzaSyBxlb6vmmmu8ysYdKzploj77tp00hwgviA",
-  authDomain: "question-and-answer-f6a1b.firebaseapp.com",
-  projectId: "question-and-answer-f6a1b",
-  storageBucket: "question-and-answer-f6a1b.appspot.com",
-  messagingSenderId: "525335137725",
-  appId: "1:525335137725:web:fbe884cd9f65f96fb516d4"
-});
+import Login from './pages/Login';
+import RegisterPage from './pages/RegisterPage';
 
 const auth = firebase.auth();
 
@@ -62,6 +55,24 @@ const App = ({ dispatch }) => {
             <Route exact path="/questions" component={QuestionsPage} />
             <Route exact path="/question/:id" component={SingleQuestionPage} />
             <Route exact path="/answer/:id" component={AnswerFormPage} />
+            <Route
+              exact path = "/login"
+              component={()=>{
+                return(
+                  <Login dispatch = {dispatch}>
+                  </Login>
+                );
+              }}
+              />
+              <Route
+              exact path = "/Register"
+              component={()=>{
+                return(
+                  <RegisterPage dispatch = {dispatch}>
+                  </RegisterPage>
+                );
+              }}
+              />
             <Redirect to="/" />
           </Switch>
         </>
