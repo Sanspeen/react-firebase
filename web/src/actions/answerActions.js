@@ -1,5 +1,7 @@
-//const URL_BASE = 'http://localhost:8080';
-const URL_BASE = ' https://damp-chamber-37615.herokuapp.com';
+import { Answer } from "../components/Answer";
+
+const URL_BASE = 'http://localhost:8080';
+//const URL_BASE = ' https://damp-chamber-37615.herokuapp.com';
 
 
 export const LOADING = 'LOADING'
@@ -15,7 +17,7 @@ export const success = payload => ({
 
 export const failure = () => ({ type: LOADED_FAILURE })
 
-export function deleteQuestion(id) {
+export function deleteAnswer(id) {
     return async dispatch => {
         dispatch(loading())
         try {
@@ -28,7 +30,7 @@ export function deleteQuestion(id) {
                     }
                 }
             )
-            dispatch(success({redirect: `/list`}));
+            dispatch(success({redirect: `/question/${id}`}));
         } catch (error) {
             dispatch(failure())
         }
