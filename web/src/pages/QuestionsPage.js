@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-
+import { Link } from 'react-router-dom'
 import { fetchQuestions } from '../actions/questionActions'
 import { Question } from '../components/Question'
 
@@ -8,16 +8,33 @@ const QuestionsPage = ({ dispatch, loading, questions, hasErrors }) => {
     useEffect(() => {
         dispatch(fetchQuestions())
     }, [dispatch])
-    
+
+    const [search, setSearch] = useState("");
+    const [categorySearch, setCategorySearch] = useState("");
+    console.log(search);
+
+    var questionFilteredCategory = questions.filter(question => question.category.toUpperCase().includes(categorySearch.toUpperCase()))
+    var questionsFilteredSearch = questionFilteredCategory.filter(question => question.question.toUpperCase().includes(search.toUpperCase()))
+
+    const goToVariable = questionsFilteredSearch[0]?.id
+
+    const handleSearch = (e)=>{
+        setSearch(e.target.value);
+    }
+
     const renderQuestions = () => {
         if (loading) return <p>Loading questions...</p>
         if (hasErrors) return <p>Unable to display questions.</p>
 
-        return questions.map(question => <Question key={question.id} question={question} excerpt />)
+        return questionsFilteredSearch.map(question => <Question  setCategorySearch = {setCategorySearch} key={question.id} question={question} excerpt />)
     }
 
     return (
         <section>
+            <form>
+                <input type = "text" onChange = { handleSearch} placeholder = "SEARCH SOME QUESTION..."/>
+                <Link to = {`/question/${goToVariable}`}> <input style = {{display: "none"}} type="submit" value = "search"/> </Link>
+            </form>
             <h1>Questions</h1>
             {renderQuestions()}
         </section>
