@@ -15,6 +15,7 @@ public class SendMailService {
     private final String FROM = "sofka.reto@gmail.com";
 
     public SendMailService() {
+        //Simplemente es el constructor vacio inicializado.
     }
 
     public Mono<String> sendMail(String to, String subject, String body){

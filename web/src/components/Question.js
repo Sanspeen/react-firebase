@@ -22,20 +22,4 @@ export const Question = ({ question, excerpt, onDelete, setCategorySearch }) => 
               </Link>
             )}
           </article>
-
-  
-  {/* <article className={excerpt ? 'question-excerpt' : 'question'}>
-   
-    <p>{question.category}  - <small>{question.type}</small></p>
-   
-    {onDelete && (
-      <button className="button right" onClick={() => onDelete(question.id)}>DELETE</button>
-    )}
-  
-    {excerpt && (
-      <Link to={`/question/${question.id}`} className="button">
-        View Question
-      </Link>
-    )}
-  </article> */}
 }

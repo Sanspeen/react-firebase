@@ -11,7 +11,6 @@ const QuestionsPage = ({ dispatch, loading, questions, hasErrors }) => {
 
     const [search, setSearch] = useState("");
     const [categorySearch, setCategorySearch] = useState("");
-    console.log(search);
 
     var questionFilteredCategory = questions.filter(question => question.category.toUpperCase().includes(categorySearch.toUpperCase()))
     var questionsFilteredSearch = questionFilteredCategory.filter(question => question.question.toUpperCase().includes(search.toUpperCase()))
@@ -40,11 +39,9 @@ const QuestionsPage = ({ dispatch, loading, questions, hasErrors }) => {
         </section>
     )
 }
-
 const mapStateToProps = state => ({
     loading: state.question.loading,
     questions: state.question.questions,
     hasErrors: state.question.hasErrors,
 })
-
 export default connect(mapStateToProps)(QuestionsPage)

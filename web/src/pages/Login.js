@@ -21,9 +21,7 @@ const signInWithGoogle = () => {
     auth.signInWithPopup(provider);
 };
 
-const signin = (email, password)=>{
-	return auth().signInWithEmailAndPassword(email, password);
-}
+
 
 const auth = firebase.auth();
 
@@ -87,7 +85,7 @@ const Login = ({ dispatch }) => {
                     type="button"
                     className="btn-login btn-google"
                     onClick={signInWithGoogle}
-                >Iniciar con google <i class="fab fa-google"></i></button>
+                >Iniciar con google <i className="fab fa-google"></i></button>
             </form>
             <p>No tienes una cuenta todavia ?<Link to="/Register">REGISTRARSE</Link></p>
         </div>

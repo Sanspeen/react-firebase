@@ -10,7 +10,6 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 import { login, logout } from './actions/authActions';
-
 import { PublicNavbar, PrivateNavbar } from './components/Navbar'
 import HomePage from './pages/HomePage'
 import SingleQuestionPage from './pages/SingleQuestionPage'
@@ -23,7 +22,6 @@ import Login from './pages/Login';
 import RegisterPage from './pages/RegisterPage';
 
 const auth = firebase.auth();
-
 const App = ({ dispatch }) => {
   const [user] = useAuthState(auth);
   if(user){
@@ -81,7 +79,6 @@ const App = ({ dispatch }) => {
     </Router>
   )
 }
-
 
 function SignIn() {
   const signInWithGoogle = () => {

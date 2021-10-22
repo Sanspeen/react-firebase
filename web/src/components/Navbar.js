@@ -4,7 +4,7 @@ import icon from '../media/icon.png'
 
 export const PublicNavbar = () => (
   <nav>
-    <img src = {icon} className = "icon"/>
+    <img alt = "" src = {icon} className = "icon"/>
 
     <section>
       <Link to="/">Home</Link>
@@ -16,7 +16,7 @@ export const PublicNavbar = () => (
 
 export const PrivateNavbar = () => (
   <nav>
-    <img src = {icon} className = "icon"/>
+    <img alt = "" src = {icon} className = "icon"/>
     <section>
       <Link to="/">Home</Link>
       <Link to="/questions">Questions</Link>

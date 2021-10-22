@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { postQuestion } from '../actions/questionActions'
 import { connect } from 'react-redux'
@@ -7,7 +6,6 @@ import { Input } from "../components/Input";
 
 const FormPage = ({ dispatch, loading, redirect, userId, userEmail }) => {
     
-    const { register, handleSubmit } = useForm();
     const history = useHistory();
     const [content, setContent] = useState('');
 
@@ -30,7 +28,6 @@ const FormPage = ({ dispatch, loading, redirect, userId, userEmail }) => {
             question:content,
             userEmail:userEmail
         }
-        console.log(data);
         validateInput(data) && dispatch(postQuestion(data));
     };
 
@@ -53,7 +50,7 @@ const FormPage = ({ dispatch, loading, redirect, userId, userEmail }) => {
             <form onSubmit={onSubmit}>
 
                 <div>
-                    <label for="type">Type</label>
+                    <label htmlFor="type">Type</label>
                     <select name = "type"  id="type" onChange={handleInputChange}>
                         <option value="OPEN (LONG OPEN BOX)">OPEN (LONG OPEN BOX)</option>
                         <option value="OPINION (SHORT OPEN BOX)">OPINION (SHORT OPEN BOX)</option>
@@ -62,7 +59,7 @@ const FormPage = ({ dispatch, loading, redirect, userId, userEmail }) => {
                     </select>
                 </div>
                 <div>
-                    <label for="category">Category</label>
+                    <label htmlFor="category">Category</label>
                     <select name = "category" id="category" onChange={handleInputChange} >
                         <option value="TECHNOLOGY AND COMPUTER">TECHNOLOGY AND COMPUTER</option>
                         <option value="SCIENCES">SCIENCES</option>
@@ -74,9 +71,8 @@ const FormPage = ({ dispatch, loading, redirect, userId, userEmail }) => {
                 </div>
 
                 <div>
-                    <label for="question">Question</label>
+                    <label htmlFor="question">Question</label>
                     <Input id="question" setContent={setContent}/>
-                    {/* <textarea id="question" {...register("question", { required: true, maxLength: 300 })} /> */}
                 </div>
                 <button type="submit" className="button" disabled={loading} >{
                     loading ? "Saving ...." : "Save"

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import {  fetchQuestion, postAnswer } from '../actions/questionActions'
 import { connect } from 'react-redux'
@@ -10,7 +9,6 @@ import { Input } from "../components/Input";
 const FormPage = ({ dispatch, loading, redirect, match,hasErrors, question, userId }) => {
 
     const [content, setContent] = useState('');
-    const { register, handleSubmit } = useForm();
     const { id } = match.params
     const history = useHistory();
 
@@ -57,7 +55,7 @@ const FormPage = ({ dispatch, loading, redirect, match,hasErrors, question, user
 
             <form onSubmit={onSubmit}>
                 <div>
-                    <label for="answer">Answer</label>
+                    <label htmlFor="answer">Answer</label>
                     <Input id="answer" setContent={setContent}/>
                     {/* <textarea id="answer" {...register("answer", { required: true, maxLength: 300 })} /> */}
                 </div>
