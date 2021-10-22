@@ -3,6 +3,7 @@ package co.com.sofka.questions.usecases;
 import co.com.sofka.questions.collections.Question;
 import co.com.sofka.questions.reposioties.QuestionRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import reactor.core.publisher.Flux;
@@ -25,7 +26,8 @@ class ListUseCaseTest {
     }
 
     @Test
-     void getValidationTest(){
+    @DisplayName("Test de validacion que hizo el coach.")
+    void getValidationTest(){
         var question =  new Question();
         question.setUserId("xxxx-xxxx");
         question.setType("tech");
