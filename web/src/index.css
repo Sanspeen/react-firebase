@@ -225,3 +225,8 @@ body {
   .main-container{
     min-height: 70vh;
   }
+
+  .searching-bar{
+    border-radius: 50px;
+    border: 1px solid gray;
+  }
