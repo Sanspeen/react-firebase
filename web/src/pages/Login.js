@@ -62,11 +62,11 @@ const Login = ({ dispatch }) => {
 
     return (
         <div className="login-container">
-            <h2>Inicio de sesion</h2>
+            <h2>LOG IN</h2>
             <form className="form-login" onSubmit={loginUser}>
                 <input
                     type="text"
-                    id="login"
+                    className = "Email-input"
                     name="email"
                     placeholder="Email"
                     onChange={handleInputChange}
@@ -74,20 +74,24 @@ const Login = ({ dispatch }) => {
                 />
                 <input
                     type="password"
+                    className = "Password-input"
                     id="password"
                     name="password"
-                    placeholder="Ingrese contraseña"
+                    placeholder="Password"
                     onChange={handleInputChange}
                     value={userData.password}
                 />
-                <button type="submit" className="btn-login btn-email">Iniciar sesion</button>
-                <button
-                    type="button"
-                    className="btn-login btn-google"
-                    onClick={signInWithGoogle}
-                >Iniciar con google <i className="fab fa-google"></i></button>
+                <div className = "login-buttons">
+                    <button type="submit" className="btn-login btn-email">Let's go!</button>
+                    <button
+                        type="button"
+                        className="btn-login btn-google"
+                        onClick={signInWithGoogle}
+                    >Log in with google<i className="fab fa-google"></i></button>
+                </div>
+                
             </form>
-            <p>No tienes una cuenta todavia ?<Link to="/Register">REGISTRARSE</Link></p>
+            <p>Do you need a new account?   <Link to="/Register">SING IN</Link></p>
         </div>
     )
 }

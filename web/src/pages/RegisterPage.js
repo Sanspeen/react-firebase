@@ -34,25 +34,29 @@ const RegisterPage = ({ dispatch }) => {
 
     return (
         <div className="login-container">
-            <h2>Registro de usuraios</h2>
+            <h2>USER SING IN</h2>
             <form className="form-login" onSubmit={registerUser}>
                 <input
                     type="text"
+                    className = "Password-input"
                     id="email"
                     name="email"
-                    placeholder="Ingrese un correo electronico"
+                    placeholder="Please write your E-mail address"
                     onChange={handleInputChange}
                     value={userData.email}
                 />
                 <input
                     type="password"
+                    className = "Password-input"
                     id="password"
                     name="password"
                     value={userData.password}
                     onChange={handleInputChange}
-                    placeholder="Ingrese una contraseña"
+                    placeholder="Create your passowrd"
                 />
-                <button type="submit" className="btn-login btn-email">Registrarse</button>
+                <div className = "login-buttons">
+                    <button type="submit" className="btn-login btn-email">Sing In</button>
+                </div>
             </form>
         </div>
     )

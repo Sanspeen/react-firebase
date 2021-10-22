@@ -68,7 +68,10 @@ body {
   }
 
   hr{
+    height: 5px;
+    color: #ccc;
     margin-top: 100px;
+    margin-bottom: -2px;
   }
 
   footer{
@@ -142,4 +145,78 @@ body {
     top: 10px;
     margin-top: -10px;
   }
+
+  .login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .login-container h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .login-container .Email-input{
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+
+  .login-container .Password-input{
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+
+  .login-container button{
+    font-size: 20px;
+    color: #eee;
+    background-color: #ea3546;
+    border: none;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 50px;
+  }
   
+  .login-container button:hover{
+    font-size: 20px;
+    background-color: #ea3546;
+    color: blue;
+    border: none;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 50px;
+  }
+
+  .login-container p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .login-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: #eee;
+    
+  }
+
+  .support-container{
+    margin-top: 20px;
+    margin-right: 10%;
+  }
+
+  .description-container{
+    margin-left: 5%;
+  }

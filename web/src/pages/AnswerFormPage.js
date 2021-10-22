@@ -57,7 +57,6 @@ const FormPage = ({ dispatch, loading, redirect, match,hasErrors, question, user
                 <div>
                     <label htmlFor="answer">Answer</label>
                     <Input id="answer" setContent={setContent}/>
-                    {/* <textarea id="answer" {...register("answer", { required: true, maxLength: 300 })} /> */}
                 </div>
                 <button type="submit" className="button" disabled={loading} >{
                     loading ? "Saving ...." : "Save"

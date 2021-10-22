@@ -21,8 +21,8 @@ const OwnerQuestionsPage = ({ dispatch, loading, questions, hasErrors, redirect,
             text:"this question will be deleted if you choose confirm.",
             icon:"warning",
             buttons:["Cancell", "Confirm"]
-            }).then(answerToDelete=>{
-                if(answerToDelete){
+            }).then(questionToDelete=>{
+                if(questionToDelete){
                     dispatch(deleteQuestion(id))
                     swal({
                         text:"The question has been deleted successfully!",
