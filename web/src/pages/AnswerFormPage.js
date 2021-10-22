@@ -49,7 +49,7 @@ const FormPage = ({ dispatch, loading, redirect, match,hasErrors, question, user
 
 
     return (
-        <section>
+        <section className = "main-container">
             {renderQuestion()}
             <h1>New Answer</h1>
 

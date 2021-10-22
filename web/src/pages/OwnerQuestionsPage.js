@@ -44,7 +44,7 @@ const OwnerQuestionsPage = ({ dispatch, loading, questions, hasErrors, redirect,
     }
 
     return (
-        <section>
+        <section className = "main-container">
             <h1>Questions</h1>
             {renderQuestions()}
         </section>

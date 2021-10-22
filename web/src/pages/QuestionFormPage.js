@@ -44,7 +44,7 @@ const FormPage = ({ dispatch, loading, redirect, userId, userEmail }) => {
     }
 
     return (
-        <section>
+        <section className = "main-container">
             <h1>New Question</h1>
 
             <form onSubmit={onSubmit}>

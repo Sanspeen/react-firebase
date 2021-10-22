@@ -59,7 +59,7 @@ const SingleQuestionPage = ({
   }
 
   return (
-    <section>
+    <section className = "main-container">
       {renderQuestion()}
       {userId && <Link to={"/answer/" + id} className="button right">
         Reply

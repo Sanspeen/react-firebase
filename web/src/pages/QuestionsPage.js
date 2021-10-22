@@ -29,7 +29,7 @@ const QuestionsPage = ({ dispatch, loading, questions, hasErrors }) => {
     }
 
     return (
-        <section>
+        <section className = "main-container">
             <form>
                 <input type = "text" onChange = { handleSearch} placeholder = "SEARCH SOME QUESTION..."/>
                 <Link to = {`/question/${goToVariable}`}> <input style = {{display: "none"}} type="submit" value = "search"/> </Link>
